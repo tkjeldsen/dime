@@ -259,9 +259,9 @@ dxfLayerData::writeWrl(FILE *fp, int indent, const bool vrml1,
       facebsp.getPoint(i, v);
       if (only2d) v[2] = 0.0f;
       if (i < n-1)
-	fprintf(fp, "            %.8g %.8g %.8g,\n", v[0], v[1], v[2]);
+	fprintf(fp, "            %.12g %.12g %.12g,\n", v[0], v[1], v[2]);
       else 
-	fprintf(fp, "            %.8g %.8g %.8g\n", v[0], v[1], v[2]);
+	fprintf(fp, "            %.12g %.12g %.12g\n", v[0], v[1], v[2]);
     }
     fprintf(fp, 
 	    "          ]\n"
@@ -323,9 +323,9 @@ dxfLayerData::writeWrl(FILE *fp, int indent, const bool vrml1,
       linebsp.getPoint(i, v);
       if (only2d) v[2] = 0.0f;
       if (i < n-1)
-	fprintf(fp, "            %.8g %.8g %.8g,\n", v[0], v[1], v[2]);
+	fprintf(fp, "            %.12g %.12g %.12g,\n", v[0], v[1], v[2]);
       else 
-	fprintf(fp, "            %.8g %.8g %.8g\n", v[0], v[1], v[2]);
+	fprintf(fp, "            %.12g %.12g %.12g\n", v[0], v[1], v[2]);
     }
     fprintf(fp, 
 	    "          ]\n"
